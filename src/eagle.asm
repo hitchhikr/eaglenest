@@ -3842,10 +3842,10 @@ COMPM3:             lea      (lbB002658)-VARS(a2),a4
                     andi.w   #1,(LOADED)-VARS(a2)
                     beq.w    COMPZZZ
                     lea      (lbB002664)-VARS(a2),a4
-COMPZZZ:            moveq    #3,d2
+COMPZZZ:            moveq    #4-1,d2
 COMP30:             tst.b    (a4)
                     bne.w    RTS
-                    lea      (3,a4),a4
+                    addq.l   #3,a4
                     dbra     d2,COMP30
                     bra.w    MSCOMP
 
